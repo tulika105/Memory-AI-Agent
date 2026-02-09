@@ -33,4 +33,6 @@ jobs:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
         run: |
-          python reminder_email.py
+            python reminder_email.py
+
+         
