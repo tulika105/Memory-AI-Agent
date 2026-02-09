@@ -79,7 +79,7 @@ This distinction is the central learning outcome of the project.
 
 ## 🔁 Daily Workflow (End-to-End)
 
-1. A daily email reminder is sent using Windows Task Scheduler  
+1. A daily email reminder is sent using GitHub Actions  
 2. The user manually runs the agent  
 3. The user enters their learning for the day  
 4. The learning is stored persistently in JSON  
@@ -108,11 +108,13 @@ This design choice is deliberate and important.
 ```text
 learning_memory_agent/
 ├── agent.py                 # Main AI agent logic
-├── reminder_email.py        # Daily email reminder script
-├── long_term_memory.json    # Persistent long-term memory store
-├── requirements.txt         # Project dependencies
-├── .env                     # Secrets
-├── .gitignore
+├── reminder_email.py        # Email reminder script
+├── long_term_memory.json    # Persistent long-term memory
+├── requirements.txt
+├── .env                     # Local secrets
+├── .github/
+│   └── workflows/
+│       └── daily_reminder.yml
 └── README.md
 
 ```
@@ -130,7 +132,7 @@ learning_memory_agent/
 - **Long-term memory:** JSON file (`long_term_memory.json`) stored on disk
 
 ### Automation
-- **Windows Task Scheduler** – for daily email reminders
+- **GitHub Actions** – for daily email reminders
 
 ### Email
 - **Gmail SMTP** – sends reminder emails
