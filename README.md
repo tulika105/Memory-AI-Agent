@@ -43,9 +43,6 @@ Maintain conversational context and reasoning **within a single run** of the age
 - Used only for conversation and reasoning
 - Not suitable for storing knowledge or facts
 
-**Human analogy:**  
-🧠 *Working memory*
-
 ---
 
 ### 2️⃣ Long-Term Memory (Persistent Memory)
@@ -62,9 +59,6 @@ Store user-provided learnings **across days and executions**.
 - Independent of LangChain
 - Deterministic and auditable
 - Used for recall by date
-
-**Human analogy:**  
-📓 *Long-term memory / journal*
 
 ---
 
