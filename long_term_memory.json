@@ -53,6 +53,6 @@
   },
   {
     "date": "2026-02-27",
-    "learning": "About transformer architecture"
+    "learning": "About Pydantic models. They are python classes used to validate input data, format api responses etc."
   }
 ]
