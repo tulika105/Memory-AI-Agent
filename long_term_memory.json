@@ -54,5 +54,9 @@
   {
     "date": "2026-02-27",
     "learning": "About Pydantic models. They are python classes used to validate input data, format api responses etc."
+  },
+  {
+    "date": "2026-03-01",
+    "learning": "About Iran & Israel war"
   }
 ]
