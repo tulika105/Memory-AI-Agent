@@ -1,6 +1,6 @@
-# 📘 Learning Memory AI Agent
+# 📘 LangChain Memory System
 
-**Learning Memory AI Agent** is a memory-focused AI agent designed to deeply understand and demonstrate the difference between **short-term memory** and **long-term memory** in LangChain-based systems.
+**LangChain Memory System** is a memory-focused project designed to deeply understand and demonstrate the difference between **short-term memory** and **long-term memory** in LangChain-based systems.
 
 ---
 
@@ -8,14 +8,14 @@
 
 The primary goal of this project is to answer one fundamental question:
 
-> **How does memory actually work in AI agents built with LangChain?**
+> **How does memory actually work in LLM systems built with LangChain?**
 
 Specifically, this project explores:
 
 - What *short-term memory* is and when it exists
 - Why LangChain memory is **not persistent**
 - How *long-term memory* must be implemented explicitly
-- How both memory types coexist in a real agent design
+- How both memory types coexist in a real system design
 
 This project avoids advanced features on purpose so the memory behavior is **clear, observable, and explainable**.
 
@@ -23,14 +23,14 @@ This project avoids advanced features on purpose so the memory behavior is **cle
 
 ## 🧠 Memory Architecture (Key Concept)
 
-This agent uses **two completely separate memory systems**, each with a clear responsibility.
+This system uses **two completely separate memory layers**, each with a clear responsibility.
 
 ---
 
 ### 1️⃣ Short-Term Memory (Execution-Time Memory)
 
 **Purpose:**  
-Maintain conversational context and reasoning **within a single run** of the agent.
+Maintain conversational context and reasoning **within a single run**.
 
 **Implementation:**
 - `InMemoryChatMessageHistory`
@@ -74,10 +74,10 @@ This distinction is the central learning outcome of the project.
 ## 🔁 Daily Workflow (End-to-End)
 
 1. A daily email reminder is sent using GitHub Actions  
-2. The user manually runs the agent  
+2. The user manually runs the program  
 3. The user enters their learning for the day  
 4. The learning is stored persistently in JSON  
-5. The agent can later recall learnings by date  
+5. The system can later recall learnings by date  
 
 This design keeps a **human-in-the-loop** to avoid hallucinated or autonomous memory creation.
 
@@ -85,7 +85,7 @@ This design keeps a **human-in-the-loop** to avoid hallucinated or autonomous me
 
 ## 🧩 Why Human-in-the-Loop Matters
 
-This project intentionally **does not auto-run the agent**.
+This project intentionally **does not auto-run**.
 
 Reasons:
 - Prevents hallucinated knowledge
@@ -100,8 +100,8 @@ This design choice is deliberate and important.
 ## 📂 Project Structure
 
 ```text
-learning_memory_agent/
-├── agent.py                 # Main AI agent logic
+langchain_memory_system/
+├── agent.py                 # Main LLM interaction logic
 ├── reminder_email.py        # Email reminder script
 ├── long_term_memory.json    # Persistent long-term memory
 ├── requirements.txt
@@ -110,8 +110,10 @@ learning_memory_agent/
 │   └── workflows/
 │       └── daily_reminder.yml
 └── README.md
-
 ```
+
+---
+
 ## 🧰 Technology Stack
 
 ### Programming Language
@@ -138,7 +140,7 @@ learning_memory_agent/
 
 ---
 
-## ▶️ Running the Agent
+## ▶️ Running the System
 
 **Install dependencies by running:** pip install -r requirements.txt
 
@@ -148,13 +150,14 @@ learning_memory_agent/
 - EMAIL_PASS=your_gmail_app_password
 - EMAIL_TO=your_email@gmail.com
 
-**Run the agent using:** python agent.py
+**Run using:** python agent.py
 
 After running, you should see the following menu:
 
-=== Learning Memory AI Agent ===
+```
+=== LangChain Memory System ===
 - Add today's learning (long-term memory)
 - Recall learning by date (long-term memory)
-- Chat with agent (short-term memory demo)
+- Chat with LLM (short-term memory demo)
 - Exit
- 
+```
